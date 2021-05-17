@@ -10,6 +10,8 @@
     <div class="container">
       <%= yield %>
       <%= render 'layouts/footer' %>
+      <!- 開発環境のみデバックを表示 ->
+      <%= debug(params) if Rails.env.development? %>
     </div>
   </body>
 </html>
